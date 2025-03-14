@@ -4,7 +4,6 @@ class BankAccount
 {
     public decimal Balance;
 
-    // Конструктор с начальным балансом
     public BankAccount(decimal initialBalance)
     {
         if (initialBalance < 0)
@@ -13,7 +12,6 @@ class BankAccount
         Balance = initialBalance;
     }
 
-    // Метод пополнения счета
     public void Deposit(decimal amount)
     {
         if (amount <= 0)
@@ -22,7 +20,6 @@ class BankAccount
         Balance += amount;
     }
 
-    // Метод снятия средств
     public bool Withdraw(decimal amount)
     {
         if (amount > Balance || amount <= 0)
@@ -32,7 +29,6 @@ class BankAccount
         return true;
     }
 
-    // Метод вывода баланса
     public void ShowBalance()
     {
         Console.WriteLine($"Текущий баланс: {Balance:F2} руб.");
@@ -43,20 +39,17 @@ class Rectangle
     public double Width;
     public double Height;
 
-    // Конструктор
     public Rectangle(double width, double height)
     {
         Width = width;
         Height = height;
     }
 
-    // Метод вычисления площади
     public double GetArea()
     {
         return Width * Height;
     }
 
-    // Метод вывода информации о прямоугольнике
     public void PrintInfo()
     {
         Console.WriteLine($"Ширина: {Width}, Высота: {Height}, Площадь: {GetArea():F2}");
@@ -67,20 +60,17 @@ class Car
     public string Brand;
     public int Mileage;
 
-    // Конструктор
     public Car(string brand, int mileage)
     {
         Brand = brand;
         Mileage = mileage;
     }
 
-    // Метод увеличения пробега
     public void Drive(int distance)
     {
         Mileage += distance;
     }
 
-    // Метод вывода текущего пробега
     public void ShowMileage()
     {
         Console.WriteLine($"Марка: {Brand}, Пробег: {Mileage} км");
@@ -151,7 +141,6 @@ class Program
         s.ShowInfo();
         Student a = new Student("12345", 44444);
         Console.ReadKey(); 
-        //Сосал?
 
     }
 }
