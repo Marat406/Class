@@ -151,6 +151,7 @@ class Program
         s.ShowInfo();
         Student a = new Student("12345", 44444);
         Console.ReadKey(); 
+        //Сосал?
 
     }
 }
